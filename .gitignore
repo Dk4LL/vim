@@ -1,0 +1,3 @@
+# ignorar as pastas usados pelo vim-plug
+plugged/
+autoload/
