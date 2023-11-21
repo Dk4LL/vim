@@ -8,6 +8,10 @@
 " =================================================================================================
 
 
+
+" Inicia um terminal em um janela própria
+nnoremap <silent> <leader>t :term <CR>
+
 " Inicia o browser-server (Porta padrão 3000)
 nnoremap <leader>bs :StartBrowserSync <CR>
 
