@@ -7,10 +7,25 @@
 "
 " =================================================================================================
 
+" -------------------------------------------------------------------------------------------------
+" Remapeando comando básicos do Vim
+" -------------------------------------------------------------------------------------------------
+
+" Inicia um terminal em um janela de terminal própria, fora do vim
+nnoremap <silent> <leader>T :term <CR>
+
+" Mudança entre as janelas no sentido esqueda, direita, cima e baixo
+nnoremap <silent> <leader>wl <C-w>h
+nnoremap <silent> <leader>wr <C-w>l
+nnoremap <silent> <leader>wu <C-w>k
+nnoremap <silent> <leader>wd <C-w>j
 
 
-" Inicia um terminal em um janela própria
-nnoremap <silent> <leader>t :term <CR>
+" -------------------------------------------------------------------------------------------------
+" Mapeando funções disponibilizadas por plugins
+" -------------------------------------------------------------------------------------------------
+
+" *** PLUGIN VIM-LIVE-SERVER ***
 
 " Inicia o browser-server (Porta padrão 3000)
 nnoremap <leader>bs :StartBrowserSync <CR>
@@ -23,3 +38,18 @@ nnoremap <leader>bS :KillBrowserSync <CR>
 
 " Encerra o browser-server na porta N (é preciso informa o valor N e apertar a tecla enter)
 " nnoremap <leader>bN KillBrowserSyncOnPort N <CR>
+
+
+
+" *** PLUGIN NERDTREE ***
+
+" Abre a NERDTree
+nnoremap <silent> <leader>to :NERDTree<CR>
+" Fecha a NERDTree
+nnoremap <silent> <leader>tc :NERDTreeClose<CR>
+" Abre o NERDTree, ou muda para a janela do NERDTree se ela já estiver aberta
+nnoremap <silent> <leader>tf :NERDTreeFocus<CR>
+" Muda o root do NERDTree para diretório de trabalho atual, se não tiver um NERDTree aberto o mesmo será criado
+nnoremap <silent> <leader>tw :NERDTreeCWD<CR>
+" Atualiza o diretório root do NERDTree
+nnoremap <silent> <leader>tr :NERDTreeRefreshRoot<CR> 

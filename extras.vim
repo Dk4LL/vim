@@ -25,6 +25,13 @@ call plug#begin()
   " Plugin para o Browser-server
   Plug 'https://github.com/wolandark/vim-live-server.git'
 
+  " Plugin para gliphicons
+  Plug 'ryanoasis/vim-devicons'
+
+  " Plugin para o explore de arquivos
+  Plug 'preservim/nerdtree'
+
+
 call plug#end()
 
 
@@ -90,3 +97,20 @@ function! MyTime()
   return "  " . current_time
 endfunction
 
+
+
+" -------------------------------------------------------------------------------------------------
+" Vim-devicons
+" -------------------------------------------------------------------------------------------------
+
+" Carrega de fato o plugin
+let g:webdevicons_enable = 1
+
+" Adiciona as flags no NERDTree
+let g:webdevicons_enable_nerdtree = 1
+
+" Define a quantidade de espaço após um glyph character (o padrão é ' ')
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+
+" Forçar preenchimento extra no NERDTree fazendo os ícones de arquivo se alinhem verticalmente
+"let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
