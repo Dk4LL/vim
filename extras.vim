@@ -31,6 +31,9 @@ call plug#begin()
   " Plugin para o explore de arquivos
   Plug 'preservim/nerdtree'
 
+  " Plugin para adicionar sintaxe hightlight no nerdtree
+  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 
 call plug#end()
 
@@ -65,9 +68,13 @@ set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'catppuccin_mocha',
       \ 'separator': {'left': "", 'right': ''},
-      \   'active': {
+      \ 'active': {
       \     'left' : [ ['mode', 'paste'], ['readonly', 'filename'], ['gitbranch'] ],
       \     'right': [ ['clock'], [ 'lineinfo', 'percent' ], [ 'fileformat', 'fileencoding', 'filetype'] ]
+      \ },
+      \ 'inactive': {
+      \     'left': [ ['filename'] ],
+      \     'right': [ ['clock'] ]
       \ },
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
@@ -75,6 +82,7 @@ let g:lightline = {
       \   'clock': 'MyTime'
       \ },
       \ }
+
 
 function! LightlineFilename()
   let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
@@ -114,3 +122,10 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 
 " Forçar preenchimento extra no NERDTree fazendo os ícones de arquivo se alinhem verticalmente
 "let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+
+
+
+" -------------------------------------------------------------------------------------------------
+" Nerdtree-syntax-highlight
+" -------------------------------------------------------------------------------------------------
+

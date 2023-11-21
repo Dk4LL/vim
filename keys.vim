@@ -20,6 +20,18 @@ nnoremap <silent> <leader>wr <C-w>l
 nnoremap <silent> <leader>wu <C-w>k
 nnoremap <silent> <leader>wd <C-w>j
 
+" Split de buffer em janela vertical e horizontal
+nnoremap <silent> <leader>wv <C-w>v
+nnoremap <silent> <leader>wh <C-w>s
+
+" Redimensionar janelas para cima e baixo.
+nnoremap <silent> <leader>wU <C-w><C-->
+nnoremap <silent> <leader>wD <C-w><C-+>
+nnoremap <silent> <leader>wL <C-w><
+nnoremap <silent> <leader>wR <C-w>>
+
+" Fecha a janela atual
+nnoremap <silent> <leader>wc <C-w>q
 
 " -------------------------------------------------------------------------------------------------
 " Mapeando funções disponibilizadas por plugins
