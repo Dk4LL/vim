@@ -31,10 +31,6 @@ call plug#begin()
   " Plugin para o explore de arquivos
   Plug 'preservim/nerdtree'
 
-  " Plugin para adicionar sintaxe hightlight no nerdtree
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-
 call plug#end()
 
 
@@ -123,9 +119,4 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 " Forçar preenchimento extra no NERDTree fazendo os ícones de arquivo se alinhem verticalmente
 "let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 
-
-
-" -------------------------------------------------------------------------------------------------
-" Nerdtree-syntax-highlight
-" -------------------------------------------------------------------------------------------------
 

@@ -12,7 +12,7 @@
 " -------------------------------------------------------------------------------------------------
 
 " Inicia um terminal em um janela de terminal própria, fora do vim
-nnoremap <silent> <leader>T :term <CR>
+nnoremap <silent> <leader>T :term<CR>
 
 " Mudança entre as janelas no sentido esqueda, direita, cima e baixo
 nnoremap <silent> <leader>wl <C-w>h
@@ -55,7 +55,7 @@ nnoremap <leader>bS :KillBrowserSync <CR>
 
 " *** PLUGIN NERDTREE ***
 
-" Abre a NERDTree
+" Abre a NERDTree (Padrão de abertura)
 nnoremap <silent> <leader>to :NERDTree<CR>
 " Fecha a NERDTree
 nnoremap <silent> <leader>tc :NERDTreeClose<CR>
@@ -64,4 +64,9 @@ nnoremap <silent> <leader>tf :NERDTreeFocus<CR>
 " Muda o root do NERDTree para diretório de trabalho atual, se não tiver um NERDTree aberto o mesmo será criado
 nnoremap <silent> <leader>tw :NERDTreeCWD<CR>
 " Atualiza o diretório root do NERDTree
-nnoremap <silent> <leader>tr :NERDTreeRefreshRoot<CR> 
+nnoremap <silent> <leader>tr :NERDTreeRefreshRoot<CR>
+
+
+
+
+
