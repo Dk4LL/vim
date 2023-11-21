@@ -31,6 +31,9 @@ call plug#begin()
   " Plugin para o explore de arquivos
   Plug 'preservim/nerdtree'
 
+  " Plugin para o Emmet no Vim 
+  Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 
@@ -118,5 +121,18 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 
 " Forçar preenchimento extra no NERDTree fazendo os ícones de arquivo se alinhem verticalmente
 "let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+
+
+
+" -------------------------------------------------------------------------------------------------
+" Emmet-vim
+" -------------------------------------------------------------------------------------------------
+
+" Modos onde o Emmet-vim está ativo
+let g:user_emmet_mode='inv'
+
+" Ativa o Emmet-vim apenas para arquivos html e css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 
