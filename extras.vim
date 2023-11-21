@@ -22,6 +22,9 @@ call plug#begin()
   " Plugin wrapper do Git no vim
   Plug 'tpope/vim-fugitive'
 
+  " Plugin para o Browser-server
+  Plug 'https://github.com/wolandark/vim-live-server.git'
+
 call plug#end()
 
 
@@ -53,7 +56,6 @@ colorscheme catppuccin_frappe
 " -------------------------------------------------------------------------------------------------
 set laststatus=2
 let g:lightline = {
-      "\ 'colorscheme': 'icebergDark',
       \ 'colorscheme': 'catppuccin_mocha',
       \ 'separator': {'left': "", 'right': ''},
       \   'active': {
