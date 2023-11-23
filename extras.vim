@@ -34,6 +34,21 @@ call plug#begin()
   " Plugin para o Emmet no Vim 
   Plug 'mattn/emmet-vim'
 
+
+
+
+
+
+
+
+
+
+
+
+
+  " Plugin para o LSP
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 
@@ -69,15 +84,16 @@ let g:lightline = {
       \ 'separator': {'left': "", 'right': ''},
       \ 'active': {
       \     'left' : [ ['mode', 'paste'], ['readonly', 'filename'], ['gitbranch'] ],
-      \     'right': [ ['clock'], [ 'lineinfo', 'percent' ], [ 'fileformat', 'fileencoding', 'filetype'] ]
+      \     'right': [ ['clock'], [ 'lineinfo', 'percent' ], ['fileformat', 'fileencoding', 'filetype'], ['status'] ]
       \ },
       \ 'inactive': {
       \     'left': [ ['filename'] ],
-      \     'right': [ ['clock'] ]
+      \     'right': [ ['clock'], ['status'] ]
       \ },
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \   'gitbranch': 'LightlineBranchname',
+      \   'status': 'StatusDiagnostic',
       \   'clock': 'MyTime'
       \ },
       \ }
@@ -102,6 +118,15 @@ function! MyTime()
   "let current_time = strftime("%c")
   let current_time = strftime("%H:%M")
   return "  " . current_time
+endfunction
+
+function! StatusDiagnostic() abort
+  let info = get(b:, 'coc_diagnostic_info', {})
+  if empty(info)
+    return '  0    0    0'
+  else
+    return '  ' .  string(info['error'])  . '    ' . string(info['warning']) . '    ' . string(info['hint'])
+  endif
 endfunction
 
 
@@ -136,3 +161,7 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 
+
+" -------------------------------------------------------------------------------------------------
+" Coc
+" -------------------------------------------------------------------------------------------------

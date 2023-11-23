@@ -68,5 +68,66 @@ nnoremap <silent> <leader>tr :NERDTreeRefreshRoot<CR>
 
 
 
+" *** PLUGIN COC ***
+
+" Torna o TAB a combinação de tecla de navegação (para frente) do menu do CoC
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+
+" Torna o S-TAB a combinação de tecla de navegação (para trás) do menu do CoC
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Torna o Enter a tecla de seleção do menu do Coc
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+      \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Torna o Ctrl-space para abrir o menu do CoC
+inoremap <silent><expr> <c-@> coc#refresh()
+
+" Define a navegação para trás nos diagnósticos do CoC
+nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
+
+" Define a navegação para frente nos diagnósticos do CoC
+nnoremap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Navegação, vai para a definição
+nnoremap <silent> gd <Plug>(coc-definition)
+
+" Nagegação, vai para a definição de tipo
+nnoremap <silent> gy <Plug>(coc-type-definition)
+
+" Nagegação, vai para a implementação
+nnoremap <silent> gi <Plug>(coc-implementation)
+
+" Navegação, vai para as referências
+nnoremap <silent> gr <Plug>(coc-references)
+
+" Exibe a documentação em uma janela do tipo pop-up
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+" Função de renomear símbolos
+nnoremap <leader>rn <Plug>(coc-rename)
+
+" Realiza formatação no código selecionado
+xnoremap <leader>f  <Plug>(coc-format-selected)
+nnoremap <leader>f  <Plug>(coc-format-selected)
+
+" Highlight do symbol sobre o cursor
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
