@@ -89,17 +89,14 @@ set hlsearch
 set et
 
 " Define que o Tab equivale a 4 'espaços'
-set tabstop=4
+set tabstop=2
 
 " Define a largura do shif + >> (<<) para identação no modo normal
-set shiftwidth=4
+set shiftwidth=2
 
 " Ativa o suporte a cores de 24 bits
 set termguicolors
 
 " Desativa a notificação de modo em uso
 set noshowmode
-
-
-
 

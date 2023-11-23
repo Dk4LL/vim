@@ -107,6 +107,9 @@ nnoremap <silent> gr <Plug>(coc-references)
 " Exibe a documentação em uma janela do tipo pop-up
 nnoremap <silent> K :call ShowDocumentation()<CR>
 
+" Aplica solução rápida (quickfix) na linha corrent
+nnoremap <leader>qf  <Plug>(coc-fix-current)
+
 " Função de renomear símbolos
 nnoremap <leader>rn <Plug>(coc-rename)
 
@@ -114,10 +117,25 @@ nnoremap <leader>rn <Plug>(coc-rename)
 xnoremap <leader>f  <Plug>(coc-format-selected)
 nnoremap <leader>f  <Plug>(coc-format-selected)
 
+" Aplica actions no código selecionado
+nnoremap <leader>a  <Plug>(coc-codeaction-selected)
+nnoremap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Aplica actions na posição do cursor
+nnoremap <leader>ac  <Plug>(coc-codeaction-cursor)
+
+" Aplica actions no buffer
+nnoremap <leader>as  <Plug>(coc-codeaction-source)
+
+" Aplica refatoração de código
+nnoremap <silent> <leader>re <Plug>(coc-codeaction-refactor)
+
+" Aplica refatoração de código em código selecionado
+xnoremap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+nnoremap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+
 " Highlight do symbol sobre o cursor
 autocmd CursorHold * silent call CocActionAsync('highlight')
-
-
 
 function! CheckBackspace() abort
   let col = col('.') - 1

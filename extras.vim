@@ -22,7 +22,7 @@ call plug#begin()
   " Plugin wrapper do Git no vim
   Plug 'tpope/vim-fugitive'
 
-  " Plugin para o Browser-server
+    " Plugin para o Browser-server
   Plug 'https://github.com/wolandark/vim-live-server.git'
 
   " Plugin para gliphicons
@@ -34,16 +34,11 @@ call plug#begin()
   " Plugin para o Emmet no Vim 
   Plug 'mattn/emmet-vim'
 
+  " Plugin para o Hoogle no vim
+  "Plug 'twinside/vim-hoogle'
 
-
-
-
-
-
-
-
-
-
+  " Plugin para destaque de indentação
+  "Plug 'preservim/vim-indent-guides'
 
 
   " Plugin para o LSP
@@ -163,5 +158,8 @@ autocmd FileType html,css EmmetInstall
 
 
 " -------------------------------------------------------------------------------------------------
-" Coc
+" Vim-indent-guides
 " -------------------------------------------------------------------------------------------------
+
+" Ativa o uso do Vim-indent-guides
+"let g:indent_guides_enable_on_vim_startup = 1

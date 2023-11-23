@@ -1,11 +1,38 @@
 {
-    "languageserver": {
+  "languageserver": {
+    // LSP - C/C++
+    "clangd": {
+      "command": "clangd",
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp", "h", "hpp"]
+    },
 
-        // LSP - C/C++
-        "clangd": {
-            "command": "clangd",
-            "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-            "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp", "h", "hpp"]
+    // LSP - Haskell
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": [".stack.yaml", ".hie-bios", "BUILD.bazel", "cabal.config", "package.yaml"],
+      "filetypes": ["hs", "lhs", "haskell"],
+      "settings": {
+        "haskell": {
+          "checkParents": "CheckOnSave",
+          "checkProject": true,
+          "maxCompletions": 40,
+          "formattingProvider": "ormolu",
+          "plugin": {
+            "cabal": { "codeActionsOn": true, "completionOn": true },
+            "ghcide-code-actions-bindings": { "globalOn": true },
+            "ghcide-code-actions-fill-holes": { "globalOn": true },
+            "ghcide-code-actions-imports-exports": { "globalOn": true },
+            "ghcide-code-actions-type-signatures": { "globalOn": true },
+            "ghcide-completions": { "config": { "autoExtendOn": true, "snippetsOn": true }, "globalOn": true },
+            "ghcide-hover-and-symbols": { "hoverOn": true, "symbolsOn": true },
+            "stan": { "globalOn": true }
+          }
         }
+      }
     }
+  
+
+  }
 }
