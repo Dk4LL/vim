@@ -127,7 +127,7 @@ nnoremap <leader>ac  <Plug>(coc-codeaction-cursor)
 " Aplica actions no buffer
 nnoremap <leader>as  <Plug>(coc-codeaction-source)
 
-" Aplica refatoração de código
+" Aplica refatoração de código no buffer
 nnoremap <silent> <leader>re <Plug>(coc-codeaction-refactor)
 
 " Aplica refatoração de código em código selecionado
@@ -136,6 +136,33 @@ nnoremap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
 
 " Highlight do symbol sobre o cursor
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Executa o Code lens na linha corrente do cursor
+nnoremap <leader>cl  <Plug>(coc-codelens-action)
+
+" Exibe lista de diagnósticos
+nnoremap <silent><nowait> <leader>el  :<C-u>CocList diagnostics<cr>
+
+" Gerencia as extensões
+nnoremap <silent><nowait> <leader>ae  :<C-u>CocList extensions<cr>
+
+" Exibe a lista de comandos do CoC
+nnoremap <silent><nowait> <leader>aC  :<C-u>CocList commands<cr>
+
+" Procura símbolo no documento atual
+nnoremap <silent><nowait> <leader>fF  :<C-u>CocList outline<cr>
+
+" Procura símbolo no workspace atual
+nnoremap <silent><nowait> <leader>fW  :<C-u>CocList -I symbols<cr>
+
+" Action seguinte do CoC
+nnoremap <silent><nowait> <leader>J  :<C-u>CocNext<CR>
+
+" Action anterior do CoC
+nnoremap <silent><nowait> <leader>K  :<C-u>CocPrev<CR>
+
+" Resume para a última CoC list
+nnoremap <silent><nowait> <leader>P  :<C-u>CocListResume<CR>
 
 function! CheckBackspace() abort
   let col = col('.') - 1
@@ -149,3 +176,22 @@ function! ShowDocumentation()
     call feedkeys('K', 'in')
   endif
 endfunction
+
+
+
+" *** RAINBOW_PARENTHESES.VIM ***
+
+" Liga/desliga o Plugin
+nnoremap <silent> <leader>;0 :RainbowParenthesesToggle<CR>
+
+" Liga/desliga o Plugin apenas para os parenteses
+nnoremap <silent> <leader>;r :RainbowParenthesesLoadRound<CR>
+
+" Liga/desliga o Plugin apenas para as colchetes
+nnoremap <silent> <leader>;s :RainbowParenthesesLoadSquare<CR>
+
+" Liga/desliga o Plugin apenas para as chaves
+nnoremap <silent> <leader>;b :RainbowParenthesesLoadBraces<CR>
+
+" Liga/desliga o Plugin apenas para as html tags
+nnoremap <silent> <leader>;c :RainbowParenthesesLoadChevrons<CR>
