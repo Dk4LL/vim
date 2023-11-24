@@ -47,6 +47,12 @@
       "command": "opam",
       "args": ["config", "exec", "--", "ocamllsp"],
       "filetypes": ["ocaml", "reason", "ml", "mli"]
+    },
+
+    // LSP - TeX
+    "latex": {
+      "command": "texlab",
+      "filetypes": ["tex", "bib", "plaintex", "context"]
     }
   },
 
