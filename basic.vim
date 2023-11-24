@@ -100,3 +100,5 @@ set termguicolors
 " Desativa a notificação de modo em uso
 set noshowmode
 
+" Para a configuração do LSP Ocaml no Vim
+"set rtp^="/Users/valdigleis/.opam/default/share/ocp-indent/vim"

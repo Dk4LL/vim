@@ -11,7 +11,13 @@
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
-      "rootPatterns": [".stack.yaml", ".hie-bios", "BUILD.bazel", "cabal.config", "package.yaml"],
+      "rootPatterns": [
+        ".stack.yaml",
+        ".hie-bios",
+        "BUILD.bazel",
+        "cabal.config",
+        "package.yaml"
+      ],
       "filetypes": ["hs", "lhs", "haskell"],
       "settings": {
         "haskell": {
@@ -25,14 +31,50 @@
             "ghcide-code-actions-fill-holes": { "globalOn": true },
             "ghcide-code-actions-imports-exports": { "globalOn": true },
             "ghcide-code-actions-type-signatures": { "globalOn": true },
-            "ghcide-completions": { "config": { "autoExtendOn": true, "snippetsOn": true }, "globalOn": true },
+            "ghcide-completions": {
+              "config": { "autoExtendOn": true, "snippetsOn": true },
+              "globalOn": true
+            },
             "ghcide-hover-and-symbols": { "hoverOn": true, "symbolsOn": true },
             "stan": { "globalOn": true }
           }
         }
       }
-    }
-  
+    },
 
+    // LSP - OCaml
+    "ocaml-lsp": {
+      "command": "opam",
+      "args": ["config", "exec", "--", "ocamllsp"],
+      "filetypes": ["ocaml", "reason", "ml", "mli"]
+    }
+  },
+
+  "suggest.completionItemKindLabels": {
+    "keyword": "",
+    "variable": "󰫧",
+    "value": "󰡱",
+    "operator": "",
+    "function": "󰊕",
+    "reference": "",
+    "constant": "",
+    "method": "",
+    "struct": "",
+    "class": "",
+    "interface": "",
+    "text": "󰦨",
+    "enum": "",
+    "enumMember": "",
+    "module": "󰕳",
+    "color": "",
+    "property": "",
+    "field": "",
+    "unit": "",
+    "event": "",
+    "file": "",
+    "folder": "",
+    "snippet": "",
+    "typeParameter": "",
+    "default": ""
   }
 }
