@@ -195,3 +195,11 @@ nnoremap <silent> <leader>;b :RainbowParenthesesLoadBraces<CR>
 
 " Liga/desliga o Plugin apenas para as html tags
 nnoremap <silent> <leader>;c :RainbowParenthesesLoadChevrons<CR>
+
+
+
+" *** VIM-BUFTABLINE ***
+
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [b :bprev<CR>
+nnoremap <silent> bc :bd<CR>

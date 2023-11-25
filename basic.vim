@@ -100,5 +100,11 @@ set termguicolors
 " Desativa a notificação de modo em uso
 set noshowmode
 
+" Ativa a mudança entre buffers sem a necessidade de salvar
+set hidden
+
 " Para a configuração do LSP Ocaml no Vim
 "set rtp^="/Users/valdigleis/.opam/default/share/ocp-indent/vim"
+
+" Para a configuração do LSP latex funcionar corretamente
+let g:tex_flavor = "tex"

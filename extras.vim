@@ -31,6 +31,9 @@ call plug#begin()
   " Plugin para o explore de arquivos
   Plug 'preservim/nerdtree'
 
+  " Plugin para o gerenciamente de buffer como tab 
+  Plug 'ap/vim-buftabline'
+
   " Plugin para o Emmet no Vim 
   Plug 'mattn/emmet-vim'
 
@@ -42,6 +45,9 @@ call plug#begin()
 
   " Plugin para arco-íris nos parentese, colchetes e chaves
   Plug 'kien/rainbow_parentheses.vim'
+
+  " Plugin para permitir a transparência no VIm
+  Plug 'tribela/vim-transparent'
 
   " Plugin para o LSP
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -191,3 +197,30 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+
+
+" -------------------------------------------------------------------------------------------------
+" Vim-transparent
+" -------------------------------------------------------------------------------------------------
+
+let g:transparent_groups = [
+  \ 'Normal', 'Comment', 'Constant', 'Special', 'Identifier',
+  \ 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
+  \ 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
+  \ 'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer']
+
+let g:transparent_groups += ['Pmenu']
+
+let g:transparent_groups += ['CocFloating']
+
+augroup transparent
+    autocmd VimEnter,ColorScheme * call MyTransparent()
+augroup END
+
+function! MyTransparent()
+  hi CursorLine ctermfg=NONE ctermbg=239 guibg=NONE guibg=#4e4e4e
+  hi CocMenuSel ctermbg=239 guibg=#4e4e4e
+endfunction
+
+

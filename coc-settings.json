@@ -52,7 +52,7 @@
     // LSP - TeX
     "latex": {
       "command": "texlab",
-      "filetypes": ["tex", "bib", "plaintex", "context"]
+      "filetypes": ["tex", "bib", "plaintex", "context", "latex"]
     }
   },
 
@@ -82,5 +82,21 @@
     "snippet": "",
     "typeParameter": "",
     "default": ""
+  }, 
+
+  "suggest.floatConfig": {
+    "border": true
+  },
+
+  "diagnostic.floatConfig": {
+    "border": true
+  },
+
+  "signature.floatConfig": {
+    "border": true
+  },
+
+  "hover.floatConfig": {
+    "border": true
   }
 }
