@@ -49,6 +49,9 @@ call plug#begin()
   " Plugin para permitir a transparência no VIm
   Plug 'tribela/vim-transparent'
 
+  " Plugin para comentários
+  Plug 'preservim/nerdcommenter'
+
   " Plugin para o LSP
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -141,15 +144,29 @@ endfunction
 " Carrega de fato o plugin
 let g:webdevicons_enable = 1
 
-" Adiciona as flags no NERDTree
-let g:webdevicons_enable_nerdtree = 1
-
 " Define a quantidade de espaço após um glyph character (o padrão é ' ')
 let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+
+
+
+" -------------------------------------------------------------------------------------------------
+" NERDTree
+" -------------------------------------------------------------------------------------------------
+
+" Adiciona as flags no NERDTree
+let g:webdevicons_enable_nerdtree = 1
 
 " Forçar preenchimento extra no NERDTree fazendo os ícones de arquivo se alinhem verticalmente
 "let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 
+" Icone para link expansível
+let g:NERDTreeDirArrowExpandable = '󰞘'
+
+" Icone para link colapsável
+let g:NERDTreeDirArrowCollapsible = '󰞖'
+
+" Exibe a quantidade de linhas nos arquivos
+let g:NERDTreeFileLines = 1
 
 
 " -------------------------------------------------------------------------------------------------
@@ -162,6 +179,14 @@ let g:user_emmet_mode='inv'
 " Ativa o Emmet-vim apenas para arquivos html e css
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+
+
+" -------------------------------------------------------------------------------------------------
+" Coc-extensions
+" -------------------------------------------------------------------------------------------------
+
+" let g:coc_global_extensions = ['coc-perl']
 
 
 
@@ -224,3 +249,37 @@ function! MyTransparent()
 endfunction
 
 
+
+" -------------------------------------------------------------------------------------------------
+" Nerdcommenter'
+" -------------------------------------------------------------------------------------------------
+
+" Usa os atalhos padrão
+let g:NERDCreateDefaultMappings = 1
+
+" Adiciona um espaço por padrão após os comentários
+let g:NERDSpaceDelims = 1
+
+" Usa sintaxe compacta para o prettified de múltiplas linhas de commentários
+let g:NERDCompactSexyComs = 1
+
+" Alinhamento dos comentários linha por linha (left ou right), em vez de seguir a endentação do código.
+let g:NERDDefaultAlign = 'left'
+
+" Seta a estrutura de comentários de uma linguagem para ser o padrão em extensões não listadas
+"let g:NERDAltDelims_java = 1
+
+" Configura os caracteres de comentários
+let g:NERDCustomDelimiters = { 
+      \ 'c': { 'left': '/**', 'right': '*/' },
+      \ 'tex': { 'left': '%', 'right': '%' }
+      \ }
+
+" Permitir comentar e inverter linhas vazias (útil ao comentar uma região)
+let g:NERDCommentEmptyLines = 1
+
+" Habilita a remoção automática de espaços em branco no final ao descomentar
+let g:NERDTrimTrailingWhitespace = 1
+
+" Habilitar o NERDCommenterToggle para verificar se todas as linhas selecionadas estão comentadas ou não
+let g:NERDToggleCheckAllLines = 1

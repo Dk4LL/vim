@@ -182,24 +182,39 @@ endfunction
 " *** RAINBOW_PARENTHESES.VIM ***
 
 " Liga/desliga o Plugin
-nnoremap <silent> <leader>;0 :RainbowParenthesesToggle<CR>
+nnoremap <silent> <leader>{0 :RainbowParenthesesToggle<CR>
 
 " Liga/desliga o Plugin apenas para os parenteses
-nnoremap <silent> <leader>;r :RainbowParenthesesLoadRound<CR>
+nnoremap <silent> <leader>{r :RainbowParenthesesLoadRound<CR>
 
 " Liga/desliga o Plugin apenas para as colchetes
-nnoremap <silent> <leader>;s :RainbowParenthesesLoadSquare<CR>
+nnoremap <silent> <leader>{s :RainbowParenthesesLoadSquare<CR>
 
 " Liga/desliga o Plugin apenas para as chaves
-nnoremap <silent> <leader>;b :RainbowParenthesesLoadBraces<CR>
+nnoremap <silent> <leader>{b :RainbowParenthesesLoadBraces<CR>
 
 " Liga/desliga o Plugin apenas para as html tags
-nnoremap <silent> <leader>;c :RainbowParenthesesLoadChevrons<CR>
+nnoremap <silent> <leader>{c :RainbowParenthesesLoadChevrons<CR>
 
 
 
 " *** VIM-BUFTABLINE ***
 
+" Vai para o próximo buffer (respeita a lista circular)
 nnoremap <silent> ]b :bnext<CR>
+
+" Vai para o buffer anterior (respeita a lista circular)
 nnoremap <silent> [b :bprev<CR>
-nnoremap <silent> bc :bd<CR>
+
+" Fecha (mata ou deleta) o buffer atual
+nnoremap <silent> <leader>bd :bd<CR>
+
+
+
+" *** NERDCOMMENTER ***
+
+" Símbolo de comentário a esquerda 
+nnoremap <silent> <leader>c} V}:call nerdcommenter#Comment('x', 'toggle')<CR>
+" Símbolo de comantário a direita
+nnoremap <silent> <leader>c{ V{:call nerdcommenter#Comment('x', 'toggle')<CR>
+
