@@ -218,3 +218,13 @@ nnoremap <silent> <leader>c} V}:call nerdcommenter#Comment('x', 'toggle')<CR>
 " Símbolo de comantário a direita
 nnoremap <silent> <leader>c{ V{:call nerdcommenter#Comment('x', 'toggle')<CR>
 
+
+" *** VIM-GITGUTTER ***
+
+" Próximo Hunk 
+" nnoremap ]h <Plug>(GitGutterNextHunk)
+
+" Prévio Hunk
+" nnoremap [h <Plug>(GitGutterPrevHunk)
+
+

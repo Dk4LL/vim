@@ -108,3 +108,4 @@ set hidden
 
 " Para a configuração do LSP latex funcionar corretamente
 let g:tex_flavor = "tex"
+
