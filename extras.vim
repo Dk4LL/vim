@@ -58,7 +58,7 @@ call plug#begin()
   " Plugin para o LSP
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-call plug#end()
+  call plug#end()
 
 
 
@@ -254,7 +254,7 @@ endfunction
 
 
 " -------------------------------------------------------------------------------------------------
-" Nerdcommenter'
+" Nerdcommenter
 " -------------------------------------------------------------------------------------------------
 
 " Usa os atalhos padrão
@@ -286,5 +286,6 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Habilitar o NERDCommenterToggle para verificar se todas as linhas selecionadas estão comentadas ou não
 let g:NERDToggleCheckAllLines = 1
+
 
 

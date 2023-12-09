@@ -219,6 +219,7 @@ nnoremap <silent> <leader>c} V}:call nerdcommenter#Comment('x', 'toggle')<CR>
 nnoremap <silent> <leader>c{ V{:call nerdcommenter#Comment('x', 'toggle')<CR>
 
 
+
 " *** VIM-GITGUTTER ***
 
 " Próximo Hunk 
@@ -226,5 +227,7 @@ nnoremap <silent> <leader>c{ V{:call nerdcommenter#Comment('x', 'toggle')<CR>
 
 " Prévio Hunk
 " nnoremap [h <Plug>(GitGutterPrevHunk)
+
+
 
 
