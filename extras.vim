@@ -97,7 +97,7 @@ let g:lightline = {
       \ },
       \ 'inactive': {
       \     'left': [ ['filename'] ],
-      \     'right': [ ['clock'], ['status'] ]
+      \     'right': [ ['clock'] ]
       \ },
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
