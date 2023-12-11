@@ -40,10 +40,10 @@ nnoremap <silent> <leader>wc <C-w>q
 " *** PLUGIN VIM-LIVE-SERVER ***
 
 " Inicia o browser-server (Porta padrão 3000)
-nnoremap <leader>bs :StartBrowserSync <CR>
+nnoremap <leader>Bo :StartBrowserSync <CR>
 
 " Encerra o browser-server (Porta padrão 3000)
-nnoremap <leader>bS :KillBrowserSync <CR>
+nnoremap <leader>Bd :KillBrowserSync <CR>
 
 " Inicia o browser-server na porta N (é preciso informa o valor N e apertar a tecla enter)
 " nnoremap <leader>bn :StartBrowserSyncOnPort N <CR>
