@@ -103,6 +103,9 @@ set noshowmode
 " Ativa a mudança entre buffers sem a necessidade de salvar
 set hidden
 
+" Define que os folds seja marcados pela indentação
+set foldmethod=indent
+
 " Para a configuração do LSP Ocaml no Vim
 "set rtp^="/Users/valdigleis/.opam/default/share/ocp-indent/vim"
 
