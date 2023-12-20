@@ -17,6 +17,9 @@ set encoding=utf-8
 "  Define a codificação padrão para a leitura de Vimscript
 scriptencoding utf-8
 
+" Define que o vim não crie arquivos de backup
+set nobackup
+
 " Exibe enumeração nas linhas
 set number
 
