@@ -228,6 +228,3 @@ nnoremap <silent> <leader>c{ V{:call nerdcommenter#Comment('x', 'toggle')<CR>
 " Prévio Hunk
 " nnoremap [h <Plug>(GitGutterPrevHunk)
 
-
-
-
