@@ -1,4 +1,4 @@
-" =================================================================================================
+ =================================================================================================
 "
 " Arquivo com as configurações básicas do meu Vim
 " Autor: Dk4LL (dk4ll@proton.me)
@@ -114,5 +114,3 @@ set foldmethod=indent
 
 " Para a configuração do LSP latex funcionar corretamente
 let g:tex_flavor = "tex"
-
-
