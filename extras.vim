@@ -58,7 +58,7 @@ call plug#begin()
   " Plugin para o LSP
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-  call plug#end()
+call plug#end()
 
 
 
