@@ -39,16 +39,26 @@ nnoremap <silent> <leader>wc <C-w>q
 
 " *** PLUGIN VIM-LIVE-SERVER ***
 
-" Inicia o browser-server (Porta padrão 3000)
-nnoremap <leader>Bo :StartBrowserSync <CR>
+" Inicia o browser-server (Porta padrão 3000) usando o browsersync
+" nnoremap <leader>Bo :StartBrowserSync <CR>
 
-" Encerra o browser-server (Porta padrão 3000)
-nnoremap <leader>Bd :KillBrowserSync <CR>
+" Inicia o browser-server (Porta padrão 3000) usando o Live-Server
+nnoremap <leader>Bo :StartLiveServer <CR>
 
-" Inicia o browser-server na porta N (é preciso informa o valor N e apertar a tecla enter)
+" Encerra o browser-server (Porta padrão 3000) usando o browsersync
+" nnoremap <leader>Bd :KillBrowserSync <CR>
+
+" Encerra o browser-server (Porta padrão 3000) usando o Live-Server
+nnoremap <leader>Bd :KillLiveServer <CR>
+
+
+
+
+
+" Inicia o browser-server na porta N (é preciso informa o valor N e apertar a tecla enter) usando o browsersync
 " nnoremap <leader>bn :StartBrowserSyncOnPort N <CR>
 
-" Encerra o browser-server na porta N (é preciso informa o valor N e apertar a tecla enter)
+" Encerra o browser-server na porta N (é preciso informa o valor N e apertar a tecla enter) usando o browsersync
 " nnoremap <leader>bN KillBrowserSyncOnPort N <CR>
 
 
