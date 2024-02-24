@@ -238,3 +238,18 @@ nnoremap <silent> <leader>c{ V{:call nerdcommenter#Comment('x', 'toggle')<CR>
 " Prévio Hunk
 " nnoremap [h <Plug>(GitGutterPrevHunk)
 
+
+" -------------------------------------------------------------------------------------------------
+" Define novas funçÕes e faz o mapeando em um comando do Vim
+" -------------------------------------------------------------------------------------------------
+
+" Função para execução do compile.sh (necessita que o arquivo tenha permissão de execução)
+function! RunCompile()
+  if filereadable("compile.sh")
+    echo "Hello, world"
+  else
+    echo "Sorry"
+  endif
+endfunction
+
+nnoremap <leader>CE :call RunCompile()<CR>
