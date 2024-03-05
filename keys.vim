@@ -246,10 +246,10 @@ nnoremap <silent> <leader>c{ V{:call nerdcommenter#Comment('x', 'toggle')<CR>
 " Função para execução do compile.sh (necessita que o arquivo tenha permissão de execução)
 function! RunCompile()
   if filereadable("compile.sh")
-    echo "Hello, world"
+    execute "!./compile.sh"
   else
     echo "Sorry"
   endif
 endfunction
 
-nnoremap <leader>CE :call RunCompile()<CR>
+nnoremap <silent> <leader>CE :call RunCompile()<CR>
