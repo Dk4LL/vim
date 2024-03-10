@@ -19,9 +19,12 @@ call plug#begin()
   " Plugin para a barra de status
   Plug 'itchyny/lightline.vim'
 
-  " Plugin wrapper do Git no vim
+  " Plugin para informações sobre status do git
   Plug 'tpope/vim-fugitive'
-  
+
+  " Plugin para controle de conflitos git
+  Plug 'samoshkin/vim-mergetool'
+
   " Plugin para o Browser-server
   Plug 'https://github.com/wolandark/vim-live-server.git'
 

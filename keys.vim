@@ -35,12 +35,6 @@ nnoremap <silent> <leader>wc <C-w>q
 
 
 
-" -------------------------------------------------------------------------------------------------
-" Mapeando funções disponibilizadas por plugins
-" -------------------------------------------------------------------------------------------------
-
-
-
 " =================================================================================================
 " *** PLUGIN VIM-LIVE-SERVER ***
 " =================================================================================================
@@ -237,11 +231,14 @@ nnoremap <silent> <leader>ncR V{:call nerdcommenter#Comment('x', 'toggle')<CR>
 
 
 " =================================================================================================
-" *** fugitive ***
+" *** VIM-MERGETOOL ***
 " =================================================================================================
  
-" Split verticlamente a janela e exibe o dif view para o Git
-nnoremap <silent> <leader>gdv :Gvdiffsplit<CR>
+" Starta a fuuncionalidade de checagem de conflitos
+nnoremap <silent> <leader>gs :MergetoolStart<CR>
+
+" Fecha a funcionaldiade de checagem de conflitos
+nnoremap <silent> <leader>gq :MergetoolStop<CR>
 
 
-" ---------->
+
