@@ -172,7 +172,7 @@ nnoremap <silent><nowait> <leader>J  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <leader>K  :<C-u>CocPrev<CR>
 
 " Resume para a última CoC list
-nnoremap <silent><nowait> <leader>P  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <leader>lr  :<C-u>CocListResume<CR>
 
 function! CheckBackspace() abort
   let col = col('.') - 1
@@ -229,27 +229,3 @@ nnoremap <silent> <leader>c} V}:call nerdcommenter#Comment('x', 'toggle')<CR>
 nnoremap <silent> <leader>c{ V{:call nerdcommenter#Comment('x', 'toggle')<CR>
 
 
-
-" *** VIM-GITGUTTER ***
-
-" Próximo Hunk 
-" nnoremap ]h <Plug>(GitGutterNextHunk)
-
-" Prévio Hunk
-" nnoremap [h <Plug>(GitGutterPrevHunk)
-
-
-" -------------------------------------------------------------------------------------------------
-" Define novas funçÕes e faz o mapeando em um comando do Vim
-" -------------------------------------------------------------------------------------------------
-
-" Função para execução do compile.sh (necessita que o arquivo tenha permissão de execução)
-function! RunCompile()
-  if filereadable("compile.sh")
-    execute "!./compile.sh"
-  else
-    echo "Sorry"
-  endif
-endfunction
-
-nnoremap <silent> <leader>CE :call RunCompile()<CR>
