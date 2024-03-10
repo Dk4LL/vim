@@ -243,3 +243,5 @@ nnoremap <silent> <leader>ncR V{:call nerdcommenter#Comment('x', 'toggle')<CR>
 " Split verticlamente a janela e exibe o dif view para o Git
 nnoremap <silent> <leader>gdv :Gvdiffsplit<CR>
 
+
+" ---------->
