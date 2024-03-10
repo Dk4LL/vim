@@ -33,37 +33,35 @@ nnoremap <silent> <leader>wR <C-w>>
 " Fecha a janela atual
 nnoremap <silent> <leader>wc <C-w>q
 
+
+
 " -------------------------------------------------------------------------------------------------
 " Mapeando funções disponibilizadas por plugins
 " -------------------------------------------------------------------------------------------------
 
+
+
+" =================================================================================================
 " *** PLUGIN VIM-LIVE-SERVER ***
+" =================================================================================================
 
 " Inicia o browser-server (Porta padrão 3000) usando o browsersync
 " nnoremap <leader>Bo :StartBrowserSync <CR>
 
 " Inicia o browser-server (Porta padrão 3000) usando o Live-Server
-nnoremap <leader>Bo :StartLiveServer <CR>
+nnoremap <leader>sl :StartLiveServer <CR>
 
 " Encerra o browser-server (Porta padrão 3000) usando o browsersync
 " nnoremap <leader>Bd :KillBrowserSync <CR>
 
 " Encerra o browser-server (Porta padrão 3000) usando o Live-Server
-nnoremap <leader>Bd :KillLiveServer <CR>
+nnoremap <leader>kl :KillLiveServer <CR>
 
 
 
-
-
-" Inicia o browser-server na porta N (é preciso informa o valor N e apertar a tecla enter) usando o browsersync
-" nnoremap <leader>bn :StartBrowserSyncOnPort N <CR>
-
-" Encerra o browser-server na porta N (é preciso informa o valor N e apertar a tecla enter) usando o browsersync
-" nnoremap <leader>bN KillBrowserSyncOnPort N <CR>
-
-
-
+" =================================================================================================
 " *** PLUGIN NERDTREE ***
+" =================================================================================================
 
 " Abre a NERDTree (Padrão de abertura)
 nnoremap <silent> <leader>to :NERDTree<CR>
@@ -78,7 +76,9 @@ nnoremap <silent> <leader>tr :NERDTreeRefreshRoot<CR>
 
 
 
+" =================================================================================================
 " *** PLUGIN COC ***
+" =================================================================================================
 
 " Torna o TAB a combinação de tecla de navegação (para frente) do menu do CoC
 inoremap <silent><expr> <TAB>
@@ -106,7 +106,7 @@ nnoremap <silent> ]g <Plug>(coc-diagnostic-next)
 nnoremap <silent> gd <Plug>(coc-definition)
 
 " Nagegação, vai para a definição de tipo
-nnoremap <silent> gy <Plug>(coc-type-definition)
+nnoremap <silent> gt <Plug>(coc-type-definition)
 
 " Nagegação, vai para a implementação
 nnoremap <silent> gi <Plug>(coc-implementation)
@@ -124,55 +124,55 @@ nnoremap <leader>qf  <Plug>(coc-fix-current)
 nnoremap <leader>rn <Plug>(coc-rename)
 
 " Realiza formatação no código selecionado
-xnoremap <leader>f  <Plug>(coc-format-selected)
-nnoremap <leader>f  <Plug>(coc-format-selected)
+xnoremap <leader>cfs  <Plug>(coc-format-selected)
+nnoremap <leader>cfs  <Plug>(coc-format-selected)
 
 " Aplica actions no código selecionado
-nnoremap <leader>a  <Plug>(coc-codeaction-selected)
-nnoremap <leader>a  <Plug>(coc-codeaction-selected)
+xnoremap <leader>cas  <Plug>(coc-codeaction-selected)
+nnoremap <leader>cas  <Plug>(coc-codeaction-selected)
 
 " Aplica actions na posição do cursor
-nnoremap <leader>ac  <Plug>(coc-codeaction-cursor)
+nnoremap <leader>cac  <Plug>(coc-codeaction-cursor)
 
 " Aplica actions no buffer
-nnoremap <leader>as  <Plug>(coc-codeaction-source)
+nnoremap <leader>cas  <Plug>(coc-codeaction-source)
 
 " Aplica refatoração de código no buffer
-nnoremap <silent> <leader>re <Plug>(coc-codeaction-refactor)
+nnoremap <silent> <leader>cr <Plug>(coc-codeaction-refactor)
 
 " Aplica refatoração de código em código selecionado
-xnoremap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
-nnoremap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+xnoremap <silent> <leader>crs  <Plug>(coc-codeaction-refactor-selected)
+nnoremap <silent> <leader>crs  <Plug>(coc-codeaction-refactor-selected)
 
 " Highlight do symbol sobre o cursor
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Executa o Code lens na linha corrente do cursor
-nnoremap <leader>cl  <Plug>(coc-codelens-action)
+nnoremap <leader>cla  <Plug>(coc-codelens-action)
 
 " Exibe lista de diagnósticos
-nnoremap <silent><nowait> <leader>el  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <leader>cld  :<C-u>CocList diagnostics<cr>
 
 " Gerencia as extensões
-nnoremap <silent><nowait> <leader>ae  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <leader>cle  :<C-u>CocList extensions<cr>
 
 " Exibe a lista de comandos do CoC
-nnoremap <silent><nowait> <leader>aC  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <leader>clc  :<C-u>CocList commands<cr>
 
 " Procura símbolo no documento atual
-nnoremap <silent><nowait> <leader>fF  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <leader>clo  :<C-u>CocList outline<cr>
 
 " Procura símbolo no workspace atual
-nnoremap <silent><nowait> <leader>fW  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <leader>cls  :<C-u>CocList -I symbols<cr>
 
 " Action seguinte do CoC
-nnoremap <silent><nowait> <leader>J  :<C-u>CocNext<CR>
+nnoremap <silent><nowait> <leader>cN  :<C-u>CocNext<CR>
 
 " Action anterior do CoC
-nnoremap <silent><nowait> <leader>K  :<C-u>CocPrev<CR>
+nnoremap <silent><nowait> <leader>cP  :<C-u>CocPrev<CR>
 
 " Resume para a última CoC list
-nnoremap <silent><nowait> <leader>lr  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <leader>clr  :<C-u>CocListResume<CR>
 
 function! CheckBackspace() abort
   let col = col('.') - 1
@@ -189,7 +189,9 @@ endfunction
 
 
 
+" =================================================================================================
 " *** RAINBOW_PARENTHESES.VIM ***
+" =================================================================================================
 
 " Liga/desliga o Plugin
 nnoremap <silent> <leader>{0 :RainbowParenthesesToggle<CR>
@@ -208,7 +210,9 @@ nnoremap <silent> <leader>{c :RainbowParenthesesLoadChevrons<CR>
 
 
 
+" =================================================================================================
 " *** VIM-BUFTABLINE ***
+" =================================================================================================
 
 " Vai para o próximo buffer (respeita a lista circular)
 nnoremap <silent> ]b :bnext<CR>
@@ -221,11 +225,25 @@ nnoremap <silent> <leader>bd :bd<CR>
 
 
 
+" =================================================================================================
 " *** NERDCOMMENTER ***
+" =================================================================================================
 
-" Símbolo de comentário a esquerda 
-nnoremap <silent> <leader>c} V}:call nerdcommenter#Comment('x', 'toggle')<CR>
-" Símbolo de comantário a direita
-nnoremap <silent> <leader>c{ V{:call nerdcommenter#Comment('x', 'toggle')<CR>
+" Símbolo de comentário à esquerda 
+nnoremap <silent> <leader>ncL V}:call nerdcommenter#Comment('x', 'toggle')<CR>
+" Símbolo de comantário à  direita
+nnoremap <silent> <leader>ncR V{:call nerdcommenter#Comment('x', 'toggle')<CR>
+
+
+
+" =================================================================================================
+" *** fugitive ***
+" =================================================================================================
+ 
+" Split verticlamente a janela e exibe o dif view para o Git
+nnoremap <silent> <leader>gdv :Gvdiffsplit<CR>
+
+" Diff na posição do cursor
+nnoremap <silent> <leader>gdc :Git<CR>
 
 
