@@ -116,6 +116,3 @@ set foldmethod=indent
 let g:tex_flavor = "tex"
 
 
-" Para o controle de conflitos git
-let g:mergetool_layout = 'mr'
-let g:mergetool_prefer_revision = 'local'

@@ -316,3 +316,10 @@ let g:vim_json_conceal=0
 let g:indentLine_enabled = 1
 
 
+" -------------------------------------------------------------------------------------------------
+" Vim-mergetool
+" -------------------------------------------------------------------------------------------------
+
+" Para o controle de conflitos git
+let g:mergetool_layout = 'mr'
+let g:mergetool_prefer_revision = 'local'
