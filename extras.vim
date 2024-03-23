@@ -23,7 +23,7 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
 
   " Plugin para controle de conflitos git
-  Plug 'samoshkin/vim-mergetool'
+  " Plug 'samoshkin/vim-mergetool'
 
   " Plugin para o Browser-server
   Plug 'https://github.com/wolandark/vim-live-server.git'
