@@ -18,9 +18,11 @@ My personal config for the Vim.
 * [pyright](https://github.com/microsoft/pyright)
 * [texlab](https://github.com/latex-lsp/texlab)
 
-## Language servers
+## Coc extensions
 
-* [coc-css](https://github.com/neoclide/coc-css) (installed via coc)
-* [coc-html](https://github.com/neoclide/coc-html) (installed via coc)
-* [coc-tsserver](https://github.com/neoclide/coc-tsserver) (installed via coc)
+Please install via coc-install command the following Coc extensions
+
+* [coc-css](https://github.com/neoclide/coc-css)
+* [coc-html](https://github.com/neoclide/coc-html)
+* [coc-tsserver](https://github.com/neoclide/coc-tsserver)
 * [coc-react-refactor](https://github.com/fannheyward/coc-react-refactor)
