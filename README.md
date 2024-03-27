@@ -7,7 +7,7 @@ My personal config for the Vim.
 * [Vim](https://www.vim.org/) (this one is obvious).
 * [Vim-plug](https://github.com/junegunn/vim-plug)
 
-## Language servers 
+## Language servers and Tools
 
 * [texlab](https://github.com/latex-lsp/texlab)
 * [pyright](https://github.com/microsoft/pyright)
@@ -18,4 +18,4 @@ My personal config for the Vim.
 * [coc-css](https://github.com/neoclide/coc-css) (installed via coc)
 * [coc-html](https://github.com/neoclide/coc-html) (installed via coc)
 * [coc-tsserver](https://github.com/neoclide/coc-tsserver) (installed via coc)
-
+* [coc-react-refactor](https://github.com/fannheyward/coc-react-refactor)

@@ -288,33 +288,6 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 
 
-" -------------------------------------------------------------------------------------------------
-" IndentLine
-" -------------------------------------------------------------------------------------------------
-
-" Define o uso de cores compatíveis com o terminal
-let g:indentLine_color_term = 239
-
-" Se você não quiser destacar a cor oculta com seu esquema de cores, ative:
-let g:indentLine_setColors = 0
-
-" Define os caracteres usado nas rules
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
-" Para o indentLine substituirá seu 'concealcursor' e 'conceallevel' pelo valor padrão:
-let g:indentLine_concealcursor = 'inc'
-let g:indentLine_conceallevel = 2
-
-" Parta manter sua configuração de ocultação
-let g:indentLine_setConceal = 0
-
-" Desativa para arquivos json e markdown
-let g:markdown_syntax_conceal=0
-let g:vim_json_conceal=0
-
-" ativa por padrão o uso do IndentLine
-let g:indentLine_enabled = 1
-
 
 " -------------------------------------------------------------------------------------------------
 " Vim-mergetool

@@ -85,18 +85,23 @@
   }, 
 
   "suggest.floatConfig": {
-    "border": true
+    "border": true,
+    "highlight": true,
+    "borderhighlight": true
   },
 
   "diagnostic.floatConfig": {
-    "border": true
+    "border": true,
+    "borderhighlight": true
   },
 
   "signature.floatConfig": {
-    "border": true
+    "border": true,
+    "borderhighlight": true
   },
 
   "hover.floatConfig": {
-    "border": true
+    "border": true,
+    "borderhighlight": true
   }
 }
